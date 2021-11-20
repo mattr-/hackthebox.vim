@@ -11,7 +11,7 @@
 " +------------------------+
 " |  Color Name  |   Hex   |
 " |--------------+---------|
-" | Black        | #1a2332 |
+" | Black        | #141d2b |
 " |--------------+---------|
 " | White        | #a4b1cd |
 " |--------------+---------|
@@ -106,7 +106,7 @@ let s:cyan = { "gui": "#5cecc6", "cterm": "86", "cterm16": "6" } " Alternate cte
 
 let s:white = { "gui": "#ffffff", "cterm": "231", "cterm16" : "16" }
 
-let s:black = { "gui": "#1a2332", "cterm": "17", "cterm16": "0" }
+let s:black = { "gui": "#141d2b", "cterm": "17", "cterm16": "0" }
 let s:visual_black = { "gui": "NONE", "cterm": "NONE", "cterm16": s:black.cterm16 } " Black out selected text in 16-color visual mode
 
 let s:comment_grey = { "gui": "#5C6370", "cterm": "59", "cterm16": "15" }
