@@ -57,21 +57,21 @@ theme.loadEditor = function()
     DiffChange   = { fg = colors.dark_yellow }, -- diff mode: Changed line
     DiffDelete   = { fg = colors.red }, -- diff mode: Deleted line
     DiffText     = { fg = colors.blue }, -- diff mode: Changed text within a changed line
-    --ErrorMsg     = {}, -- error messages on the command line
+    ErrorMsg     = { fg = colors.white, bg = colors.dark_red}, -- error messages on the command line
     VertSplit    = { fg = colors.vertsplit }, -- the column separating vertically split windows
     Folded       = { fg = colors.comment_grey }, -- line used for closed folds
     --FoldColumn   = {}, -- 'foldcolumn'
-    --SignColumn   = {}, -- column where signs are displayed
+    SignColumn   = { bg = colors.black }, -- column where signs are displayed
     IncSearch    = { fg = colors.black, bg = colors.yellow }, -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
     LineNr       = { fg = colors.gutter_fg_grey }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
-    --CursorLineNr = {}, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
+    CursorLineNr = { fg = colors.yellow }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
     MatchParen   = { fg = colors.blue, style = "underline" }, -- The character under the cursor or just before it, if it is a paired bracket, and its match.
-    --ModeMsg      = {}, -- 'showmode' message (e.g., "-- INSERT --")
+    ModeMsg      = { fg = colors.text }, -- 'showmode' message (e.g., "-- INSERT --")
     --MoreMsg      = {}, -- more-prompt
     NonText      = { fg = colors.special_grey }, -- '~' and '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line).
     Normal       = { fg = colors.white, bg = colors.black }, -- normal text
-    Pmenu        = { bg = colors.menu_grey }, -- Popup menu: normal item.
-    PmenuSel     = { bg = colors.black }, -- Popup menu: selected item.
+    Pmenu        = { bg = colors.menu_grey, fg = colors.text }, -- Popup menu: normal item.
+    PmenuSel     = { bg = colors.black, fg = colors.white }, -- Popup menu: selected item.
     PmenuSbar    = { bg = colors.special_grey }, -- Popup menu: scrollbar.
     PmenuThumb   = { bg = colors.white }, -- Popup menu: Thumb of the scrollbar.
     Question     = { fg = colors.purple }, -- hit-enter prompt and yes/no questions
@@ -83,9 +83,9 @@ theme.loadEditor = function()
     SpellRare    = { fg = colors.dark_yellow }, -- Word that is recognized by the spellchecker as one that is hardly ever used. spell This will be combined with the highlighting used otherwise.
     StatusLine   = { fg = colors.white, bg = colors.cursor_grey }, -- status line of current window
     StatusLineNC = { fg = colors.comment_grey }, -- status lines of not-current windows Note: if this is equal to "StatusLine" Vim will use "^^^" in the status line of the current window.
-    TabLine      = { fg = colors.comment_grey }, -- tab pages line, not active tab page label
-    --TabLineFill  = {}, -- tab pages line, where there are no labels
-    TabLineSel   = { fg = colors.white }, -- tab pages line, active tab page label
+    TabLine      = { fg = colors.text }, -- tab pages line, not active tab page label
+    TabLineFill  = { bg = colors.black }, -- tab pages line, where there are no labels
+    TabLineSel   = { fg = colors.green }, -- tab pages line, active tab page label
     Title        = { fg = colors.green }, -- titles for output from ":set all", ":autocmd" etc.
     Visual       = { fg = colors.visual_black, bg = colors.visual_grey }, -- Visual mode selection
     VisualNOS    = { bg = colors.visual_grey }, -- Visual mode selection when vim is "Not Owning the Selection". Only X11 Gui's gui-x11 and xterm-clipboard supports this.
