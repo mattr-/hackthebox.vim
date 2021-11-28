@@ -47,27 +47,27 @@ function util.load()
       async = vim.loop.new_async(vim.schedule_wrap(function ()
 --        hackthebox.loadTerminal()
 --
-          -- import tables for plugins, treesitter and lsp
+        -- import tables for plugins, treesitter and lsp
 --        local plugins = hackthebox.loadPlugins()
-          local treesitter = hackthebox.loadTreeSitter()
---        local lsp = hackthebox.loadLSP()
+        local treesitter = hackthebox.loadTreeSitter()
+        local lsp = hackthebox.loadLSP()
 --
 --        -- loop trough the plugins table and highlight every member
 --        for group, colors in pairs(plugins) do
 --            util.highlight(group, colors)
 --        end
 --
-          -- loop trough the treesitter table and highlight every member
-          for group, colors in pairs(treesitter) do
-              util.highlight(group, colors)
-          end
+        -- loop trough the treesitter table and highlight every member
+        for group, colors in pairs(treesitter) do
+            util.highlight(group, colors)
+        end
 
 --        -- loop trough the lsp table and highlight every member
---        for group, colors in pairs(lsp) do
---            util.highlight(group, colors)
---        end
+        for group, colors in pairs(lsp) do
+            util.highlight(group, colors)
+        end
 --
-          async:close()
+        async:close()
 
       end))
 

@@ -160,37 +160,37 @@ theme.loadTreeSitter = function()
 
 end
 
---theme.loadLSP = function ()
+theme.loadLSP = function ()
   -- Lsp highlight groups
 
---  local lsp = {
---    LspDiagnosticsDefaultError =            { fg = colors.error }, -- used for "Error" diagnostic virtual text
---    LspDiagnosticsSignError =               { fg = colors.error }, -- used for "Error" diagnostic signs in sign column
---    LspDiagnosticsFloatingError =           { fg = colors.error }, -- used for "Error" diagnostic messages in the diagnostics float
---    LspDiagnosticsVirtualTextError =        { fg = colors.error }, -- Virtual text "Error"
---    LspDiagnosticsUnderlineError =          { style = 'undercurl', sp = colors.error }, -- used to underline "Error" diagnostics.
---    LspDiagnosticsDefaultWarning =          { fg = colors.yellow}, -- used for "Warning" diagnostic signs in sign column
---    LspDiagnosticsSignWarning =             { fg = colors.yellow}, -- used for "Warning" diagnostic signs in sign column
---    LspDiagnosticsFloatingWarning =         { fg = colors.yellow}, -- used for "Warning" diagnostic messages in the diagnostics float
---    LspDiagnosticsVirtualTextWarning =      { fg = colors.yellow}, -- Virtual text "Warning"
---    LspDiagnosticsUnderlineWarning =        { style = 'undercurl', sp = colors.yellow }, -- used to underline "Warning" diagnostics.
---    LspDiagnosticsDefaultInformation =      { fg = colors.paleblue }, -- used for "Information" diagnostic virtual text
---    LspDiagnosticsSignInformation =         { fg = colors.paleblue },  -- used for "Information" diagnostic signs in sign column
---    LspDiagnosticsFloatingInformation =     { fg = colors.paleblue }, -- used for "Information" diagnostic messages in the diagnostics float
---    LspDiagnosticsVirtualTextInformation =  { fg = colors.paleblue }, -- Virtual text "Information"
---    LspDiagnosticsUnderlineInformation =    { style = 'undercurl', sp = colors.paleblue }, -- used to underline "Information" diagnostics.
---    LspDiagnosticsDefaultHint =             { fg = colors.purple  },  -- used for "Hint" diagnostic virtual text
---    LspDiagnosticsSignHint =                { fg = colors.purple  }, -- used for "Hint" diagnostic signs in sign column
---    LspDiagnosticsFloatingHint =            { fg = colors.purple  }, -- used for "Hint" diagnostic messages in the diagnostics float
---    LspDiagnosticsVirtualTextHint =         { fg = colors.purple  }, -- Virtual text "Hint"
---    LspDiagnosticsUnderlineHint =           { style = 'undercurl', sp = colors.paleblue }, -- used to underline "Hint" diagnostics.
---    LspReferenceText =                      { fg = colors.accent, bg = colors.highlight }, -- used for highlighting "text" references
---    LspReferenceRead =                      { fg = colors.accent, bg = colors.highlight }, -- used for highlighting "read" references
---    LspReferenceWrite =                     { fg = colors.accent, bg = colors.highlight }, -- used for highlighting "write" references
---  }
---
---  return lsp
---
---end
+ local lsp = {
+   DiagnosticDefaultError           = { fg = colors.red }, -- used for "Error" diagnostic virtual text
+   DiagnosticSignError              = { fg = colors.red }, -- used for "Error" diagnostic signs in sign column
+   DiagnosticFloatingError          = { fg = colors.red }, -- used for "Error" diagnostic messages in the diagnostics float
+   DiagnosticVirtualTextError       = { fg = colors.red }, -- Virtual text "Error"
+   DiagnosticUnderlineError         = { style = 'undercurl', sp = colors.red }, -- used to underline "Error" diagnostics.
+   DiagnosticDefaultWarning         = { fg = colors.yellow}, -- used for "Warning" diagnostic signs in sign column
+   DiagnosticSignWarning            = { fg = colors.yellow}, -- used for "Warning" diagnostic signs in sign column
+   DiagnosticFloatingWarning        = { fg = colors.yellow}, -- used for "Warning" diagnostic messages in the diagnostics float
+   DiagnosticVirtualTextWarning     = { fg = colors.yellow}, -- Virtual text "Warning"
+   DiagnosticUnderlineWarning       = { style = 'undercurl', sp = colors.dark_yellow }, -- used to underline "Warning" diagnostics.
+   DiagnosticDefaultInformation     = { fg = colors.blue }, -- used for "Information" diagnostic virtual text
+   DiagnosticSignInformation        = { fg = colors.blue },  -- used for "Information" diagnostic signs in sign column
+   DiagnosticFloatingInformation    = { fg = colors.blue }, -- used for "Information" diagnostic messages in the diagnostics float
+   DiagnosticVirtualTextInformation = { fg = colors.blue }, -- Virtual text "Information"
+   DiagnosticUnderlineInformation   = { style = 'undercurl', sp = colors.paleblue }, -- used to underline "Information" diagnostics.
+   DiagnosticDefaultHint            = { fg = colors.purple  },  -- used for "Hint" diagnostic virtual text
+   DiagnosticSignHint               = { fg = colors.purple  }, -- used for "Hint" diagnostic signs in sign column
+   DiagnosticFloatingHint           = { fg = colors.purple  }, -- used for "Hint" diagnostic messages in the diagnostics float
+   DiagnosticVirtualTextHint        = { fg = colors.purple  }, -- Virtual text "Hint"
+   DiagnosticUnderlineHint          = { style = 'undercurl', sp = colors.dark_yellow }, -- used to underline "Hint" diagnostics.
+   LspReferenceText                 = { fg = colors.accent, bg = colors.highlight }, -- used for highlighting "text" references
+   LspReferenceRead                 = { fg = colors.accent, bg = colors.highlight }, -- used for highlighting "read" references
+   LspReferenceWrite                = { fg = colors.accent, bg = colors.highlight }, -- used for highlighting "write" references
+ }
+
+  return lsp
+
+end
 
 return theme
