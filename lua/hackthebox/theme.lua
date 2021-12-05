@@ -69,7 +69,7 @@ theme.loadEditor = function()
     ModeMsg      = { fg = colors.text }, -- 'showmode' message (e.g., "-- INSERT --")
     --MoreMsg      = {}, -- more-prompt
     NonText      = { fg = colors.special_grey }, -- '~' and '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line).
-    Normal       = { fg = colors.white, bg = colors.black }, -- normal text
+    Normal       = { fg = colors.text, bg = colors.black }, -- normal text
     Pmenu        = { bg = colors.menu_grey, fg = colors.text }, -- Popup menu: normal item.
     PmenuSel     = { bg = colors.black, fg = colors.white }, -- Popup menu: selected item.
     PmenuSbar    = { bg = colors.special_grey }, -- Popup menu: scrollbar.
@@ -164,11 +164,11 @@ theme.loadLSP = function ()
   -- Lsp highlight groups
 
  local lsp = {
-   DiagnosticDefaultError           = { fg = colors.red }, -- used for "Error" diagnostic virtual text
-   DiagnosticSignError              = { fg = colors.red }, -- used for "Error" diagnostic signs in sign column
-   DiagnosticFloatingError          = { fg = colors.red }, -- used for "Error" diagnostic messages in the diagnostics float
-   DiagnosticVirtualTextError       = { fg = colors.red }, -- Virtual text "Error"
-   DiagnosticUnderlineError         = { style = 'undercurl', sp = colors.red }, -- used to underline "Error" diagnostics.
+   DiagnosticDefaultError           = { fg = colors.dark_red }, -- used for "Error" diagnostic virtual text
+   DiagnosticSignError              = { fg = colors.dark_red }, -- used for "Error" diagnostic signs in sign column
+   DiagnosticFloatingError          = { fg = colors.dark_red }, -- used for "Error" diagnostic messages in the diagnostics float
+   DiagnosticVirtualTextError       = { fg = colors.dark_red }, -- Virtual text "Error"
+   DiagnosticUnderlineError         = { style = 'undercurl', sp = colors.dark_red }, -- used to underline "Error" diagnostics.
    DiagnosticDefaultWarning         = { fg = colors.yellow}, -- used for "Warning" diagnostic signs in sign column
    DiagnosticSignWarning            = { fg = colors.yellow}, -- used for "Warning" diagnostic signs in sign column
    DiagnosticFloatingWarning        = { fg = colors.yellow}, -- used for "Warning" diagnostic messages in the diagnostics float
@@ -179,14 +179,14 @@ theme.loadLSP = function ()
    DiagnosticFloatingInformation    = { fg = colors.blue }, -- used for "Information" diagnostic messages in the diagnostics float
    DiagnosticVirtualTextInformation = { fg = colors.blue }, -- Virtual text "Information"
    DiagnosticUnderlineInformation   = { style = 'undercurl', sp = colors.paleblue }, -- used to underline "Information" diagnostics.
-   DiagnosticDefaultHint            = { fg = colors.purple  },  -- used for "Hint" diagnostic virtual text
-   DiagnosticSignHint               = { fg = colors.purple  }, -- used for "Hint" diagnostic signs in sign column
-   DiagnosticFloatingHint           = { fg = colors.purple  }, -- used for "Hint" diagnostic messages in the diagnostics float
-   DiagnosticVirtualTextHint        = { fg = colors.purple  }, -- Virtual text "Hint"
+   DiagnosticDefaultHint            = { fg = colors.comment_grey  },  -- used for "Hint" diagnostic virtual text
+   DiagnosticSignHint               = { fg = colors.comment_grey  }, -- used for "Hint" diagnostic signs in sign column
+   DiagnosticFloatingHint           = { fg = colors.comment_grey  }, -- used for "Hint" diagnostic messages in the diagnostics float
+   DiagnosticVirtualTextHint        = { fg = colors.comment_grey  }, -- Virtual text "Hint"
    DiagnosticUnderlineHint          = { style = 'undercurl', sp = colors.dark_yellow }, -- used to underline "Hint" diagnostics.
-   LspReferenceText                 = { fg = colors.accent, bg = colors.highlight }, -- used for highlighting "text" references
-   LspReferenceRead                 = { fg = colors.accent, bg = colors.highlight }, -- used for highlighting "read" references
-   LspReferenceWrite                = { fg = colors.accent, bg = colors.highlight }, -- used for highlighting "write" references
+   LspReferenceText                 = { fg = colors.cyan, bg = colors.highlight }, -- used for highlighting "text" references
+   LspReferenceRead                 = { fg = colors.cyan, bg = colors.highlight }, -- used for highlighting "read" references
+   LspReferenceWrite                = { fg = colors.cyan, bg = colors.highlight }, -- used for highlighting "write" references
  }
 
   return lsp
