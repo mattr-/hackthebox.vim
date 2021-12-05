@@ -17,7 +17,7 @@ theme.loadSyntax = function()
     Conditional    = { fg = colors.purple }, -- if, then, else, endif, switch, etc.
     Repeat         = { fg = colors.purple }, -- for, do, while, etc.
     Label          = { fg = colors.purple }, -- case, default, etc.
---    Operator       = {}, -- sizeof", "+", "*", etc.
+    Operator       = { fg = colors.blue }, -- sizeof", "+", "*", etc.
     Keyword        = { fg = colors.red }, -- any other keyword
     Exception      = { fg = colors.purple }, -- try, catch, throw
     PreProc        = { fg = colors.yellow }, -- generic Preprocessor
@@ -191,6 +191,20 @@ theme.loadLSP = function ()
 
   return lsp
 
+end
+
+theme.loadPlugins = function()
+
+  local plugins = {
+    --nvim-hlslens highlight groups
+    HlSearchNear = { fg = colors.black, bg = colors.text },
+    HlSearchLens = { fg = colors.black, bg = colors.text },
+    HlSearchLensNear = { fg = colors.black, bg = colors.text },
+    HlSearchFloat = { fg = colors.black, bg = colors.text },
+
+  }
+
+  return plugins
 end
 
 return theme

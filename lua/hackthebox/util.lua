@@ -48,14 +48,14 @@ function util.load()
 --        hackthebox.loadTerminal()
 --
         -- import tables for plugins, treesitter and lsp
---        local plugins = hackthebox.loadPlugins()
+        local plugins = hackthebox.loadPlugins()
         local treesitter = hackthebox.loadTreeSitter()
         local lsp = hackthebox.loadLSP()
 --
 --        -- loop trough the plugins table and highlight every member
---        for group, colors in pairs(plugins) do
---            util.highlight(group, colors)
---        end
+       for group, colors in pairs(plugins) do
+           util.highlight(group, colors)
+       end
 --
         -- loop trough the treesitter table and highlight every member
         for group, colors in pairs(treesitter) do
